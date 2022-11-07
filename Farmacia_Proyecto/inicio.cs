@@ -145,5 +145,10 @@ namespace Farmacia_Proyecto
         {
             this.CenterToScreen();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
