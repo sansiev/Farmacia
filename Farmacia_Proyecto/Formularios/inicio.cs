@@ -15,6 +15,8 @@ namespace Farmacia_Proyecto
     {
         //SqlConnection conexion = new SqlConnection("Server=DESKTOP-1LQHI27;database=Proyecto_Farmaci;integrated security=true");
         SqlConnection conexion = new SqlConnection("Server=SANDERSUWU;database=Proyecto_Farmaci;integrated security=true");
+       
+        
         public inicio()
         {
             InitializeComponent();
