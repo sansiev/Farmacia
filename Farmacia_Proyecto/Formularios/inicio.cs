@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,12 +15,14 @@ namespace Farmacia_Proyecto
     public partial class inicio : Form
     {
         //SqlConnection conexion = new SqlConnection("Server=DESKTOP-1LQHI27;database=Proyecto_Farmaci;integrated security=true");
-        SqlConnection conexion = new SqlConnection("Server=SANDERSUWU;database=Proyecto_Farmaci;integrated security=true");
+       SqlConnection conexion = new SqlConnection("Server=SANDERSUWU;database=Proyecto_Farmaci;integrated security=true");
        
+     //   Conexion conexion = new Conexion();
         
         public inicio()
         {
             InitializeComponent();
+            this.CenterToParent();  
         }
         public bool confirmacion()
         {
@@ -75,7 +78,7 @@ namespace Farmacia_Proyecto
                 string estatus;
                 conexion.Open();
                 string consulta = "select Nombre,cargo from Empleado where ID_Empleado=" + texID.Text + " and contraseña ='" + texcontra.Text + "'";
-                SqlCommand comando = new SqlCommand(consulta, conexion);
+                SqlCommand comando = new SqlCommand(consulta,conexion);
                 SqlDataAdapter sda =new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -150,6 +153,39 @@ namespace Farmacia_Proyecto
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void texcontra_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void texcontra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                borrarerror();
+                if (confirmacion())
+                {
+                    login1();
+                    //if (login())
+                    //{
+                    //    Form1 principal = new Form1();
+                    //    principal.Show();
+                    //    this.Hide();
+                    //    conexion.Close();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("El usuario o la contraseña son incorrectos");
+                    //    conexion.Close();
+                    //}
+                }
+                else
+                    MessageBox.Show("Ingrese valores validos");
+                conexion.Close();
+            }
 
         }
     }

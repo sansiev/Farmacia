@@ -61,9 +61,18 @@ private void abrirformhijo(object formhijo)
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
-
+            this.CenterToParent();
             
+        }
+
+        private void BtCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

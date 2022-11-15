@@ -87,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 168);
+            this.label2.Location = new System.Drawing.Point(42, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 14);
             this.label2.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 129);
+            this.label1.Location = new System.Drawing.Point(48, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 14);
             this.label1.TabIndex = 3;
@@ -105,14 +105,16 @@
             // 
             // texcontra
             // 
-            this.texcontra.Location = new System.Drawing.Point(88, 165);
+            this.texcontra.Location = new System.Drawing.Point(121, 168);
             this.texcontra.Name = "texcontra";
+            this.texcontra.PasswordChar = '*';
             this.texcontra.Size = new System.Drawing.Size(100, 20);
             this.texcontra.TabIndex = 2;
+            this.texcontra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.texcontra_KeyPress);
             // 
             // texID
             // 
-            this.texID.Location = new System.Drawing.Point(88, 126);
+            this.texID.Location = new System.Drawing.Point(121, 129);
             this.texID.Name = "texID";
             this.texID.Size = new System.Drawing.Size(100, 20);
             this.texID.TabIndex = 1;
