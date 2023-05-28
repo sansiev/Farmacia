@@ -113,6 +113,7 @@
             this.panelNombrador.Name = "panelNombrador";
             this.panelNombrador.Size = new System.Drawing.Size(690, 60);
             this.panelNombrador.TabIndex = 25;
+            this.panelNombrador.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNombrador_Paint);
             // 
             // Nombrador
             // 

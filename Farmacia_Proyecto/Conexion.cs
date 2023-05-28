@@ -6,38 +6,36 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Farmacia_Proyecto
 {
     public class Conexion
     {
-        private SqlConnection connection;
-        private string ConnectionString;
+        private static Conexion Con = null;
 
-        public void Open()
+        public SqlConnection CrearConexion()
         {
+            SqlConnection Cadena = new SqlConnection();
             try
             {
-                ConnectionString = "Server = SANDERSUWU; database = Proyecto_Farmaci; integrated security = true";
-                connection = new SqlConnection(ConnectionString);
-                connection.Open();
-                MessageBox.Show("Conexion Establecida");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error en la conexion",ex.Message);
-            }
-        }
-        public void Close()
-        {
-            try
-            {
-                connection.Close();
+                Cadena.ConnectionString = "Server=SANDERSUWU;database=Proyecto_Farmaci;integrated security=true";
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Cadena = null;
+                throw ex;
             }
+            return Cadena;
         }
+        public static Conexion getInstancia()
+        {
+            if (Con == null)
+            {
+                Con = new Conexion();
+            }
+            return Con;
+        }
+
     }
 }

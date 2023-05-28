@@ -67,7 +67,6 @@ namespace Farmacia_Proyecto
                     lector = comando.ExecuteReader();
 
                 }
-
             }
             conexion.Close();
         }
@@ -78,6 +77,11 @@ namespace Farmacia_Proyecto
             Radioarti.Checked = false;
             Radioid.Checked = false;
             texBusqueda.Clear();
+        }
+
+        private void panelNombrador_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
