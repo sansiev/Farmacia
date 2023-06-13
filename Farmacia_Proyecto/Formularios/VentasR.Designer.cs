@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 82);
+            this.label2.Location = new System.Drawing.Point(45, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             // TBCliente
             // 
-            this.TBCliente.Location = new System.Drawing.Point(125, 79);
+            this.TBCliente.Location = new System.Drawing.Point(125, 87);
             this.TBCliente.Name = "TBCliente";
             this.TBCliente.Size = new System.Drawing.Size(116, 22);
             this.TBCliente.TabIndex = 3;
@@ -108,11 +108,11 @@
             this.Descripcion,
             this.Cantidad,
             this.Precio});
-            this.dataFactura.Location = new System.Drawing.Point(244, 170);
+            this.dataFactura.Location = new System.Drawing.Point(239, 179);
             this.dataFactura.Name = "dataFactura";
             this.dataFactura.ReadOnly = true;
             this.dataFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataFactura.Size = new System.Drawing.Size(543, 156);
+            this.dataFactura.Size = new System.Drawing.Size(543, 183);
             this.dataFactura.TabIndex = 6;
             // 
             // ID_Producto
@@ -159,7 +159,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(518, 82);
+            this.label4.Location = new System.Drawing.Point(518, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 8;
@@ -169,7 +169,7 @@
             // 
             this.labelF.AutoSize = true;
             this.labelF.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelF.Location = new System.Drawing.Point(583, 82);
+            this.labelF.Location = new System.Drawing.Point(583, 90);
             this.labelF.Name = "labelF";
             this.labelF.Size = new System.Drawing.Size(11, 16);
             this.labelF.TabIndex = 9;
@@ -276,7 +276,7 @@
             // 
             // TBTotal
             // 
-            this.TBTotal.Location = new System.Drawing.Point(686, 408);
+            this.TBTotal.Location = new System.Drawing.Point(681, 441);
             this.TBTotal.Name = "TBTotal";
             this.TBTotal.Size = new System.Drawing.Size(100, 20);
             this.TBTotal.TabIndex = 28;
@@ -285,7 +285,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(621, 410);
+            this.label5.Location = new System.Drawing.Point(616, 443);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
             this.label5.TabIndex = 27;
@@ -293,7 +293,7 @@
             // 
             // TbSubTotal
             // 
-            this.TbSubTotal.Location = new System.Drawing.Point(686, 341);
+            this.TbSubTotal.Location = new System.Drawing.Point(681, 374);
             this.TbSubTotal.Name = "TbSubTotal";
             this.TbSubTotal.Size = new System.Drawing.Size(100, 20);
             this.TbSubTotal.TabIndex = 30;
@@ -302,7 +302,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(596, 343);
+            this.label9.Location = new System.Drawing.Point(591, 376);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 18);
             this.label9.TabIndex = 29;
@@ -310,7 +310,7 @@
             // 
             // TBIVa
             // 
-            this.TBIVa.Location = new System.Drawing.Point(687, 374);
+            this.TBIVa.Location = new System.Drawing.Point(682, 407);
             this.TBIVa.Name = "TBIVa";
             this.TBIVa.Size = new System.Drawing.Size(100, 20);
             this.TBIVa.TabIndex = 32;
@@ -319,7 +319,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(597, 376);
+            this.label13.Location = new System.Drawing.Point(592, 409);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 18);
             this.label13.TabIndex = 31;
@@ -356,7 +356,7 @@
             this.BFacturar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BFacturar.Font = new System.Drawing.Font("Georgia", 10F);
-            this.BFacturar.Location = new System.Drawing.Point(709, 441);
+            this.BFacturar.Location = new System.Drawing.Point(709, 473);
             this.BFacturar.Name = "BFacturar";
             this.BFacturar.Size = new System.Drawing.Size(78, 27);
             this.BFacturar.TabIndex = 35;
@@ -384,7 +384,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
             this.groupBox1.Controls.Add(this.labelNum);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -393,11 +393,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.labelF);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(29, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 132);
+            this.groupBox1.Size = new System.Drawing.Size(770, 130);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Farmacia \"Lolita\"";
@@ -434,7 +433,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(799, 475);
+            this.ClientSize = new System.Drawing.Size(794, 512);
             this.Controls.Add(this.Agregado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TBCantidad);
