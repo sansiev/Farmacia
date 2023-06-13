@@ -80,11 +80,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Formularios\Ventas.cs">
+    <Compile Include="Formularios\HistorialVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas.Designer.cs">
-      <DependentUpon>Ventas.cs</DependentUpon>
+    <Compile Include="Formularios\HistorialVentas.Designer.cs">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\VentasR.cs">
       <SubType>Form</SubType>
@@ -116,8 +116,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\Ventas.resx">
-      <DependentUpon>Ventas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\HistorialVentas.resx">
+      <DependentUpon>HistorialVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VentasR.resx">
       <DependentUpon>VentasR.cs</DependentUpon>

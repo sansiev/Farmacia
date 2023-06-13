@@ -36,7 +36,7 @@ private void abrirformhijo(object formhijo)
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            abrirformhijo(new Ventas());
+            abrirformhijo(new HistorialVentas());
         }
 
         private void BtnCliente_Click(object sender, EventArgs e)
