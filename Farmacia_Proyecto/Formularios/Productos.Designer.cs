@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Agregar = new System.Windows.Forms.Button();
             this.Modificar = new System.Windows.Forms.Button();
             this.Eliminar = new System.Windows.Forms.Button();
@@ -63,198 +64,221 @@
             // 
             // Agregar
             // 
-            this.Agregar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agregar.Location = new System.Drawing.Point(33, 298);
+            this.Agregar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Agregar.Font = new System.Drawing.Font("Georgia", 10F);
+            this.Agregar.Location = new System.Drawing.Point(46, 389);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(75, 23);
+            this.Agregar.Size = new System.Drawing.Size(75, 30);
             this.Agregar.TabIndex = 0;
             this.Agregar.Text = "Agregar";
-            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Modificar
             // 
-            this.Modificar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modificar.Location = new System.Drawing.Point(157, 298);
+            this.Modificar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Modificar.Font = new System.Drawing.Font("Georgia", 10F);
+            this.Modificar.Location = new System.Drawing.Point(162, 389);
             this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(75, 23);
+            this.Modificar.Size = new System.Drawing.Size(85, 30);
             this.Modificar.TabIndex = 1;
             this.Modificar.Text = "Modificar";
-            this.Modificar.UseVisualStyleBackColor = true;
+            this.Modificar.UseVisualStyleBackColor = false;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
             // Eliminar
             // 
-            this.Eliminar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminar.Location = new System.Drawing.Point(157, 327);
+            this.Eliminar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Eliminar.Font = new System.Drawing.Font("Georgia", 10F);
+            this.Eliminar.Location = new System.Drawing.Point(46, 447);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.Eliminar.Size = new System.Drawing.Size(75, 30);
             this.Eliminar.TabIndex = 2;
             this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 122);
+            this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 14);
+            this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID_Producto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 149);
+            this.label2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 14);
+            this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 176);
+            this.label3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 14);
+            this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Descripcion";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 200);
+            this.label4.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 14);
+            this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Existencia";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 229);
+            this.label5.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 299);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 14);
+            this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Precio";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 257);
+            this.label6.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 342);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 14);
+            this.label6.Size = new System.Drawing.Size(143, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Fecha de vencimiento";
             // 
             // texId_Pro
             // 
-            this.texId_Pro.Location = new System.Drawing.Point(118, 120);
+            this.texId_Pro.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texId_Pro.Location = new System.Drawing.Point(161, 137);
             this.texId_Pro.Name = "texId_Pro";
-            this.texId_Pro.Size = new System.Drawing.Size(100, 20);
+            this.texId_Pro.Size = new System.Drawing.Size(100, 22);
             this.texId_Pro.TabIndex = 9;
             // 
             // texNombre
             // 
-            this.texNombre.Location = new System.Drawing.Point(118, 146);
+            this.texNombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texNombre.Location = new System.Drawing.Point(162, 178);
             this.texNombre.Name = "texNombre";
-            this.texNombre.Size = new System.Drawing.Size(100, 20);
+            this.texNombre.Size = new System.Drawing.Size(100, 22);
             this.texNombre.TabIndex = 10;
             // 
             // texDescr
             // 
-            this.texDescr.Location = new System.Drawing.Point(118, 172);
+            this.texDescr.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texDescr.Location = new System.Drawing.Point(162, 216);
             this.texDescr.Name = "texDescr";
-            this.texDescr.Size = new System.Drawing.Size(100, 20);
+            this.texDescr.Size = new System.Drawing.Size(100, 22);
             this.texDescr.TabIndex = 11;
             // 
             // texExis
             // 
-            this.texExis.Location = new System.Drawing.Point(118, 200);
+            this.texExis.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texExis.Location = new System.Drawing.Point(162, 253);
             this.texExis.Name = "texExis";
-            this.texExis.Size = new System.Drawing.Size(100, 20);
+            this.texExis.Size = new System.Drawing.Size(100, 22);
             this.texExis.TabIndex = 12;
             // 
             // texPrecio
             // 
-            this.texPrecio.Location = new System.Drawing.Point(118, 226);
+            this.texPrecio.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texPrecio.Location = new System.Drawing.Point(162, 293);
             this.texPrecio.Name = "texPrecio";
-            this.texPrecio.Size = new System.Drawing.Size(100, 20);
+            this.texPrecio.Size = new System.Drawing.Size(100, 22);
             this.texPrecio.TabIndex = 13;
             // 
             // texVencimiento
             // 
-            this.texVencimiento.Location = new System.Drawing.Point(169, 252);
+            this.texVencimiento.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texVencimiento.Location = new System.Drawing.Point(162, 336);
             this.texVencimiento.Name = "texVencimiento";
-            this.texVencimiento.Size = new System.Drawing.Size(100, 20);
+            this.texVencimiento.Size = new System.Drawing.Size(100, 22);
             this.texVencimiento.TabIndex = 14;
             // 
             // dataProducto
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProducto.Location = new System.Drawing.Point(277, 186);
+            this.dataProducto.Location = new System.Drawing.Point(273, 181);
             this.dataProducto.Name = "dataProducto";
             this.dataProducto.ReadOnly = true;
             this.dataProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataProducto.Size = new System.Drawing.Size(459, 193);
+            this.dataProducto.Size = new System.Drawing.Size(509, 238);
             this.dataProducto.TabIndex = 15;
             this.dataProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProducto_CellClick);
             this.dataProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProducto_CellContentClick);
             // 
             // Busqueda
             // 
-            this.Busqueda.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Busqueda.Location = new System.Drawing.Point(538, 100);
+            this.Busqueda.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Busqueda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Busqueda.Font = new System.Drawing.Font("Georgia", 10F);
+            this.Busqueda.Location = new System.Drawing.Point(572, 82);
             this.Busqueda.Name = "Busqueda";
-            this.Busqueda.Size = new System.Drawing.Size(75, 23);
+            this.Busqueda.Size = new System.Drawing.Size(75, 30);
             this.Busqueda.TabIndex = 16;
             this.Busqueda.Text = "Buscar";
-            this.Busqueda.UseVisualStyleBackColor = true;
+            this.Busqueda.UseVisualStyleBackColor = false;
             this.Busqueda.Click += new System.EventHandler(this.Busqueda_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(295, 103);
+            this.label7.Font = new System.Drawing.Font("Georgia", 10F);
+            this.label7.Location = new System.Drawing.Point(292, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 14);
+            this.label7.Size = new System.Drawing.Size(51, 17);
             this.label7.TabIndex = 17;
             this.label7.Text = "Buscar";
             // 
             // textbusqueda
             // 
-            this.textbusqueda.Location = new System.Drawing.Point(341, 100);
+            this.textbusqueda.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbusqueda.Location = new System.Drawing.Point(349, 86);
             this.textbusqueda.Name = "textbusqueda";
-            this.textbusqueda.Size = new System.Drawing.Size(191, 20);
+            this.textbusqueda.Size = new System.Drawing.Size(191, 22);
             this.textbusqueda.TabIndex = 18;
             // 
             // radioId
             // 
             this.radioId.AutoSize = true;
-            this.radioId.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioId.Location = new System.Drawing.Point(312, 136);
+            this.radioId.Font = new System.Drawing.Font("Georgia", 10F);
+            this.radioId.Location = new System.Drawing.Point(314, 130);
             this.radioId.Name = "radioId";
-            this.radioId.Size = new System.Drawing.Size(37, 18);
+            this.radioId.Size = new System.Drawing.Size(110, 21);
             this.radioId.TabIndex = 19;
             this.radioId.TabStop = true;
-            this.radioId.Text = "ID";
+            this.radioId.Text = "ID_Producto";
             this.radioId.UseVisualStyleBackColor = true;
             // 
             // radioNombre
             // 
             this.radioNombre.AutoSize = true;
-            this.radioNombre.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioNombre.Location = new System.Drawing.Point(390, 136);
+            this.radioNombre.Font = new System.Drawing.Font("Georgia", 10F);
+            this.radioNombre.Location = new System.Drawing.Point(473, 130);
             this.radioNombre.Name = "radioNombre";
-            this.radioNombre.Size = new System.Drawing.Size(71, 18);
+            this.radioNombre.Size = new System.Drawing.Size(78, 21);
             this.radioNombre.TabIndex = 20;
             this.radioNombre.TabStop = true;
             this.radioNombre.Text = "Nombre";
@@ -263,35 +287,39 @@
             // radioExis
             // 
             this.radioExis.AutoSize = true;
-            this.radioExis.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioExis.Location = new System.Drawing.Point(493, 136);
+            this.radioExis.Font = new System.Drawing.Font("Georgia", 10F);
+            this.radioExis.Location = new System.Drawing.Point(597, 130);
             this.radioExis.Name = "radioExis";
-            this.radioExis.Size = new System.Drawing.Size(90, 18);
+            this.radioExis.Size = new System.Drawing.Size(91, 21);
             this.radioExis.TabIndex = 21;
             this.radioExis.TabStop = true;
-            this.radioExis.Text = "existeancia";
+            this.radioExis.Text = "Existencia";
             this.radioExis.UseVisualStyleBackColor = true;
             // 
             // btnRefrescar
             // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Location = new System.Drawing.Point(619, 100);
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefrescar.Font = new System.Drawing.Font("Georgia", 10F);
+            this.btnRefrescar.Location = new System.Drawing.Point(673, 82);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(75, 23);
+            this.btnRefrescar.Size = new System.Drawing.Size(82, 30);
             this.btnRefrescar.TabIndex = 22;
             this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(33, 328);
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("Georgia", 10F);
+            this.btnLimpiar.Location = new System.Drawing.Point(162, 447);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(85, 30);
             this.btnLimpiar.TabIndex = 23;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // errorcito
@@ -300,31 +328,31 @@
             // 
             // panelNombrador
             // 
-            this.panelNombrador.BackColor = System.Drawing.Color.Turquoise;
+            this.panelNombrador.BackColor = System.Drawing.Color.Bisque;
             this.panelNombrador.Controls.Add(this.Nombrador);
             this.panelNombrador.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNombrador.Location = new System.Drawing.Point(0, 0);
             this.panelNombrador.Name = "panelNombrador";
-            this.panelNombrador.Size = new System.Drawing.Size(765, 60);
+            this.panelNombrador.Size = new System.Drawing.Size(794, 60);
             this.panelNombrador.TabIndex = 24;
             // 
             // Nombrador
             // 
             this.Nombrador.AutoSize = true;
-            this.Nombrador.Font = new System.Drawing.Font("Georgia", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombrador.Location = new System.Drawing.Point(271, 9);
+            this.Nombrador.Font = new System.Drawing.Font("Lucida Bright", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombrador.Location = new System.Drawing.Point(306, 15);
             this.Nombrador.Name = "Nombrador";
-            this.Nombrador.Size = new System.Drawing.Size(186, 31);
+            this.Nombrador.Size = new System.Drawing.Size(200, 34);
             this.Nombrador.TabIndex = 0;
-            this.Nombrador.Text = "-Inventario-";
+            this.Nombrador.Text = "- Inventario -";
             this.Nombrador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(765, 422);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ClientSize = new System.Drawing.Size(794, 512);
             this.Controls.Add(this.panelNombrador);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRefrescar);

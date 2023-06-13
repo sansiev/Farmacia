@@ -139,7 +139,7 @@
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(200, 61);
             this.btnVentas.TabIndex = 2;
-            this.btnVentas.Text = "Historia de Ventas";
+            this.btnVentas.Text = "Historial de Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
