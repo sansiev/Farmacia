@@ -112,7 +112,7 @@
             // 
             // panelNombrador
             // 
-            this.panelNombrador.BackColor = System.Drawing.Color.Bisque;
+            this.panelNombrador.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelNombrador.Controls.Add(this.Nombrador);
             this.panelNombrador.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNombrador.Location = new System.Drawing.Point(0, 0);

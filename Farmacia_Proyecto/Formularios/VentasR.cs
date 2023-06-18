@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Drawing.Printing;
 namespace Farmacia_Proyecto
 {
     public partial class VentasR : Form
@@ -178,8 +179,11 @@ namespace Farmacia_Proyecto
 
         }
 
+
         private void BFacturar_Click(object sender, EventArgs e)
         {
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
 
             try
             {
@@ -210,6 +214,10 @@ namespace Farmacia_Proyecto
                 MessageBox.Show("Datos NO Facturados", "Informacion");
             }
 
+
+
+           
+
         }
 
         private void TBCantidad_TextChanged(object sender, EventArgs e)
@@ -225,6 +233,7 @@ namespace Farmacia_Proyecto
 
         private void BLimpiar_Click(object sender, EventArgs e)
         {
+            TBCliente.Clear();
             dataFactura.Rows.Clear();
             TBIVa.Clear();
             TbSubTotal.Clear();
@@ -235,6 +244,21 @@ namespace Farmacia_Proyecto
         private void BBorrar_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imprimir(object sender, PrintPageEventArgs e)
+        {
+
         }
     }
 }

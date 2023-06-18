@@ -67,6 +67,7 @@
             this.labelNum = new System.Windows.Forms.Label();
             this.Agregado = new System.Windows.Forms.Button();
             this.errorcito = new System.Windows.Forms.ErrorProvider(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorcito)).BeginInit();
@@ -216,7 +217,7 @@
             // 
             // texId_Pro
             // 
-            this.texId_Pro.Location = new System.Drawing.Point(121, 180);
+            this.texId_Pro.Location = new System.Drawing.Point(121, 177);
             this.texId_Pro.Name = "texId_Pro";
             this.texId_Pro.Size = new System.Drawing.Size(100, 20);
             this.texId_Pro.TabIndex = 21;
@@ -356,7 +357,7 @@
             this.BFacturar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BFacturar.Font = new System.Drawing.Font("Georgia", 10F);
-            this.BFacturar.Location = new System.Drawing.Point(709, 473);
+            this.BFacturar.Location = new System.Drawing.Point(660, 482);
             this.BFacturar.Name = "BFacturar";
             this.BFacturar.Size = new System.Drawing.Size(78, 27);
             this.BFacturar.TabIndex = 35;
@@ -400,6 +401,7 @@
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Farmacia \"Lolita\"";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // labelNum
             // 
@@ -426,6 +428,10 @@
             // errorcito
             // 
             this.errorcito.ContainerControl = this;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir);
             // 
             // VentasR
             // 
@@ -510,5 +516,6 @@
         private System.Windows.Forms.Button Agregado;
         private System.Windows.Forms.ErrorProvider errorcito;
         private System.Windows.Forms.Label labelNum;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

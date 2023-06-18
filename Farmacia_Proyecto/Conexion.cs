@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
 
 namespace Farmacia_Proyecto
 {
@@ -36,6 +38,11 @@ namespace Farmacia_Proyecto
             }
             return Con;
         }
+       
 
+
+      
     }
+
+
 }
