@@ -184,6 +184,10 @@ namespace Farmacia_Proyecto
         {
             printDocument1 = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings= ps;
+            printDocument1.PrintPage += imprimir;
+
+            
 
             try
             {
