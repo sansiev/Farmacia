@@ -186,6 +186,7 @@ namespace Farmacia_Proyecto
             PrinterSettings ps = new PrinterSettings();
             printDocument1.PrinterSettings= ps;
             printDocument1.PrintPage += imprimir;
+            printDocument1.Print();
 
             
 
@@ -261,6 +262,31 @@ namespace Farmacia_Proyecto
         }
 
         private void imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font font = new Font ("Arial ",15);
+            int ancho = 150;
+            int y = 20;
+
+            e.Graphics.DrawString("-- farmacia lolita --", font, Brushes.Black, new RectangleF(0, y += 20,ancho,20));
+            e.Graphics.DrawString("Cliente : "+TBCliente.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("---PRODUCTOS--- : " , font, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
+           
+            
+            foreach (DataGridViewRow row in dataFactura.Rows)
+            {
+                        
+                e.Graphics.DrawString(row.Cells[0].ToString()+ "" +
+                    row.Cells[1].ToString()+ "" + row.Cells[4].ToString()
+                    , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+
+
+            }
+            e.Graphics.DrawString("subtotal: "+TbSubTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
+            e.Graphics.DrawString("------Total: $ " +TBTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("------Gracias   por visitarnos-----: $ " + TBTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
+        }
+
+        private void dataFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

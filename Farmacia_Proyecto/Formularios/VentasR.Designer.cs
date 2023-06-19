@@ -115,6 +115,7 @@
             this.dataFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataFactura.Size = new System.Drawing.Size(543, 183);
             this.dataFactura.TabIndex = 6;
+            this.dataFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataFactura_CellContentClick);
             // 
             // ID_Producto
             // 
