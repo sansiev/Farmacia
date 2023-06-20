@@ -179,7 +179,7 @@
             // 
             // Panelcontenedor
             // 
-            this.Panelcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Panelcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Panelcontenedor.Controls.Add(this.pictureBox1);
             this.Panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelcontenedor.Location = new System.Drawing.Point(200, 0);

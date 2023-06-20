@@ -305,7 +305,7 @@
             this.BFacturar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BFacturar.Font = new System.Drawing.Font("Georgia", 10F);
-            this.BFacturar.Location = new System.Drawing.Point(660, 482);
+            this.BFacturar.Location = new System.Drawing.Point(660, 473);
             this.BFacturar.Name = "BFacturar";
             this.BFacturar.Size = new System.Drawing.Size(78, 27);
             this.BFacturar.TabIndex = 35;
@@ -379,9 +379,15 @@
             // 
             // dataFactura
             // 
-            this.dataFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFactura.AllowUserToAddRows = false;
+            this.dataFactura.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataFactura.EnableHeadersVisualStyles = false;
             this.dataFactura.Location = new System.Drawing.Point(265, 151);
+            this.dataFactura.MultiSelect = false;
             this.dataFactura.Name = "dataFactura";
+            this.dataFactura.ReadOnly = true;
+            this.dataFactura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataFactura.Size = new System.Drawing.Size(516, 217);
             this.dataFactura.TabIndex = 42;
             // 

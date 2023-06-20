@@ -203,7 +203,7 @@ namespace Farmacia_Proyecto
             }
             else { 
             if (radioId.Checked == true)
-            {
+            {   
                 string consulta = "SELECT * FROM Producto WHERE ID_Prod='" + textbusqueda.Text + "'";
                 SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
                 DataTable dt = new DataTable();
