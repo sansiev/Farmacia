@@ -83,3 +83,7 @@ C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\obj\Debug\Farmacia_
 C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\obj\Debug\Farmacia_Proyecto.csproj.CoreCompileInputs.cache
 C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\obj\Debug\Farmacia_Proyecto.exe
 C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\obj\Debug\Farmacia_Proyecto.pdb
+C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\bin\Debug\itextsharp.dll
+C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\bin\Debug\itextsharp.xml
+C:\Users\50558\Documents\farmacia\Farmacia\Farmacia_Proyecto\obj\Debug\Farmacia_Proyecto.csproj.CopyComplete

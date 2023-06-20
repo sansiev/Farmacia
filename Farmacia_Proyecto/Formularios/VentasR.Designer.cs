@@ -32,12 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TBCliente = new System.Windows.Forms.TextBox();
-            this.dataFactura = new System.Windows.Forms.DataGridView();
-            this.ID_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelF = new System.Windows.Forms.Label();
@@ -67,10 +61,10 @@
             this.labelNum = new System.Windows.Forms.Label();
             this.Agregado = new System.Windows.Forms.Button();
             this.errorcito = new System.Windows.Forms.ErrorProvider(this.components);
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFactura)).BeginInit();
+            this.dataFactura = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorcito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,53 +93,6 @@
             this.TBCliente.Name = "TBCliente";
             this.TBCliente.Size = new System.Drawing.Size(116, 22);
             this.TBCliente.TabIndex = 3;
-            // 
-            // dataFactura
-            // 
-            this.dataFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Producto,
-            this.NombreP,
-            this.Descripcion,
-            this.Cantidad,
-            this.Precio});
-            this.dataFactura.Location = new System.Drawing.Point(239, 179);
-            this.dataFactura.Name = "dataFactura";
-            this.dataFactura.ReadOnly = true;
-            this.dataFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataFactura.Size = new System.Drawing.Size(543, 183);
-            this.dataFactura.TabIndex = 6;
-            this.dataFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataFactura_CellContentClick);
-            // 
-            // ID_Producto
-            // 
-            this.ID_Producto.HeaderText = "ID Producto";
-            this.ID_Producto.Name = "ID_Producto";
-            this.ID_Producto.ReadOnly = true;
-            // 
-            // NombreP
-            // 
-            this.NombreP.HeaderText = "Nombre";
-            this.NombreP.Name = "NombreP";
-            this.NombreP.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
             // 
             // label3
             // 
@@ -430,9 +377,13 @@
             // 
             this.errorcito.ContainerControl = this;
             // 
-            // printDocument1
+            // dataFactura
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir);
+            this.dataFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFactura.Location = new System.Drawing.Point(265, 151);
+            this.dataFactura.Name = "dataFactura";
+            this.dataFactura.Size = new System.Drawing.Size(516, 217);
+            this.dataFactura.TabIndex = 42;
             // 
             // VentasR
             // 
@@ -441,6 +392,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(794, 512);
+            this.Controls.Add(this.dataFactura);
             this.Controls.Add(this.Agregado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TBCantidad);
@@ -464,15 +416,14 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataFactura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VentasR";
             this.Text = "VentasR";
             this.Load += new System.EventHandler(this.VentasR_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataFactura)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorcito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,17 +433,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TBCliente;
-        private System.Windows.Forms.DataGridView dataFactura;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelF;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.TextBox texPrecio;
         private System.Windows.Forms.TextBox texDescr;
         private System.Windows.Forms.TextBox texNombre;
@@ -517,6 +462,6 @@
         private System.Windows.Forms.Button Agregado;
         private System.Windows.Forms.ErrorProvider errorcito;
         private System.Windows.Forms.Label labelNum;
-        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.DataGridView dataFactura;
     }
 }

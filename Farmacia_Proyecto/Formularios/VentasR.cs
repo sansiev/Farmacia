@@ -10,7 +10,14 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing.Printing;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace Farmacia_Proyecto
+
+
 {
     public partial class VentasR : Form
     {
@@ -125,7 +132,11 @@ namespace Farmacia_Proyecto
             DateTime f = DateTime.Today;
             labelF.Text = f.ToShortDateString();
 
-           
+            dataFactura.Columns.Add("Id Producto", "Id Producto");
+            dataFactura.Columns.Add("Nombre", "Nombre");
+            dataFactura.Columns.Add("Descripcion", "Descripcion");
+            dataFactura.Columns.Add("Cantidad", "Cantidad");
+            dataFactura.Columns.Add("Precio", "Precio");
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -145,20 +156,20 @@ namespace Farmacia_Proyecto
             }
             else 
             {
-               
-                double n;
-                DataGridViewRow fila = new DataGridViewRow();
-                fila.CreateCells(dataFactura);
-                fila.Cells[0].Value = texId_Pro.Text;
-                fila.Cells[1].Value = texNombre.Text;
-                fila.Cells[2].Value = texDescr.Text;
-                fila.Cells[3].Value = TBCantidad.Text;
-                fila.Cells[4].Value = double.Parse(texPrecio.Text) * double.Parse(TBCantidad.Text);
-                dataFactura.Rows.Add(fila);
+
+                int indice_fila = dataFactura.Rows.Add();
+                DataGridViewRow row = dataFactura.Rows[indice_fila];
+                row.Cells["Id producto"].Value = texId_Pro.Text;
+                row.Cells["Nombre"].Value = texNombre.Text;
+                row.Cells["Descripcion"].Value = texDescr.Text;
+                row.Cells["Cantidad"].Value = TBCantidad.Text;
+                row.Cells["Precio"].Value = double.Parse(texPrecio.Text) * double.Parse(TBCantidad.Text);
+                
                 SumaColumna();
                 
             }
             limpieza();
+
         }
 
         public void SumaColumna()
@@ -182,15 +193,57 @@ namespace Farmacia_Proyecto
 
         private void BFacturar_Click(object sender, EventArgs e)
         {
-            printDocument1 = new PrintDocument();
-            PrinterSettings ps = new PrinterSettings();
-            printDocument1.PrinterSettings= ps;
-            printDocument1.PrintPage += imprimir;
-            printDocument1.Print();
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
 
+            string PaginaHTML_Texto = Properties.Resources.plantilla.ToString();
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", TBCliente.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@IdFactura", labelNum.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+
+
+                
+            string filas = string.Empty;
+         
+            foreach (DataGridViewRow row in dataFactura.Rows)
+            {
+                filas += "<tr>"; 
+                filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Descripcion"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
             
+                filas += "</tr>";
+               
+            }
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", TBTotal.Text.ToString());
 
-            try
+            if (savefile.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+
+
+
+                    using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+             
+            }
+
+                try
             {
                 SqlCommand cmd = new SqlCommand("sp_Ventas", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -261,30 +314,8 @@ namespace Farmacia_Proyecto
 
         }
 
-        private void imprimir(object sender, PrintPageEventArgs e)
-        {
-            Font font = new Font ("Arial ",15);
-            int ancho = 150;
-            int y = 20;
 
-            e.Graphics.DrawString("-- farmacia lolita --", font, Brushes.Black, new RectangleF(0, y += 20,ancho,20));
-            e.Graphics.DrawString("Cliente : "+TBCliente.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("---PRODUCTOS--- : " , font, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
-           
-            
-            foreach (DataGridViewRow row in dataFactura.Rows)
-            {
-                        
-                e.Graphics.DrawString(row.Cells[0].ToString()+ "" +
-                    row.Cells[1].ToString()+ "" + row.Cells[4].ToString()
-                    , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-
-
-            }
-            e.Graphics.DrawString("subtotal: "+TbSubTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
-            e.Graphics.DrawString("------Total: $ " +TBTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
-            e.Graphics.DrawString("------Gracias   por visitarnos-----: $ " + TBTotal.ToString(), font, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
-        }
+        
 
         private void dataFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
