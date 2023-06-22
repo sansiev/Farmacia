@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Farmacia_Proyecto.Properties {
+namespace FarmaciaUsuari.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Farmacia_Proyecto.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Farmacia_Proyecto.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FarmaciaUsuari.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -67,38 +67,6 @@ namespace Farmacia_Proyecto.Properties {
             get {
                 object obj = ResourceManager.GetObject("LogotipoPNG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html &gt;
-        ///&lt;head&gt;
-        ///    &lt;title&gt;Title of the document&lt;/title&gt;
-        ///    &lt;style&gt;
-        ///        table.border {
-        ///            border-collapse: collapse;
-        ///        }
-        ///
-        ///            table.border th {
-        ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            }
-        ///
-        ///            table.border td {
-        ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            }
-        ///    &lt;/style&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///    &lt;table style=&quot;width:100%&quot;&gt;
-        ///        &lt;tr&gt;
-        ///            &lt;td style=&quot;width: [resto de la cadena truncado]&quot;;.
-        /// </summary>
-        internal static string plantilla {
-            get {
-                return ResourceManager.GetString("plantilla", resourceCulture);
             }
         }
     }
