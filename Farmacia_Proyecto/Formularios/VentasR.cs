@@ -193,6 +193,7 @@ namespace Farmacia_Proyecto
 
         private void BFacturar_Click(object sender, EventArgs e)
         {
+            //inicio
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
 
@@ -209,8 +210,8 @@ namespace Farmacia_Proyecto
             {
                 filas += "<tr>"; 
                 filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["Descripcion"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["DesCantidadcripcion"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells[""].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
             
                 filas += "</tr>";
@@ -230,7 +231,14 @@ namespace Farmacia_Proyecto
                     pdfDoc.Add(new Phrase(""));
 
 
+                     //Agregamos la imagen del banner al documento
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.LogotipoPNG, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(60, 60);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
 
+                    //img.SetAbsolutePosition(10,100);
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                    pdfDoc.Add(img);
 
                     using (StringReader sr = new StringReader(PaginaHTML_Texto))
                     {
@@ -242,6 +250,7 @@ namespace Farmacia_Proyecto
                 }
              
             }
+            //fin
 
                 try
             {

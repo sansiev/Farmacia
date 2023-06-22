@@ -1,0 +1,11 @@
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\bin\Debug\FarmaciaUsuari.exe.config
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\bin\Debug\FarmaciaUsuari.exe
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\bin\Debug\FarmaciaUsuari.pdb
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.csproj.AssemblyReference.cache
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.csproj.SuggestedBindingRedirects.cache
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.Form1.resources
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.Properties.Resources.resources
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.csproj.GenerateResource.cache
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.csproj.CoreCompileInputs.cache
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.exe
+C:\Users\50558\source\repos\FarmaciaUsuari\FarmaciaUsuari\obj\Debug\FarmaciaUsuari.pdb
